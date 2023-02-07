@@ -1,0 +1,52 @@
+A51 MACRO ASSEMBLER  Q4                                                                   12/14/2022 19:21:36 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\q4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE q4.asm SET(SMALL) DEBUG PRINT(.\Listings\q4.lst) OBJECT(.\Objects\q4.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7F04              1     MOV R7,#04H
+                       2     
+0002                   3     MAIN:
+0002 7830              4     MOV R0,#30H
+0004 7E04              5     MOV R6,#04H
+                       6     
+0006                   7     UP:
+0006 E6                8     MOV A,@R0
+0007 08                9     INC R0
+0008 86F0             10     MOV B,@R0
+000A B5F000           11     CJNE A,B,NEXT
+                      12     
+000D                  13     NEXT:
+000D 5005             14     JNC NOEXCHANGE
+000F F6               15     MOV @R0,A
+0010 18               16     DEC R0
+0011 A6F0             17     MOV @R0,B
+0013 08               18     INC R0
+                      19     
+0014                  20     NOEXCHANGE:
+0014 DEF0             21     DJNZ R6,UP
+0016 DFEA             22     DJNZ R7,MAIN
+                      23     END
+A51 MACRO ASSEMBLER  Q4                                                                   12/14/2022 19:21:36 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+MAIN . . . . . . .  C ADDR   0002H   A   
+NEXT . . . . . . .  C ADDR   000DH   A   
+NOEXCHANGE . . . .  C ADDR   0014H   A   
+UP . . . . . . . .  C ADDR   0006H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

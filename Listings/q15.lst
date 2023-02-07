@@ -1,0 +1,32 @@
+A51 MACRO ASSEMBLER  Q15                                                                  12/14/2022 15:32:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\q15.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE q15.asm SET(SMALL) DEBUG PRINT(.\Listings\q15.lst) OBJECT(.\Objects\q15
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7411              1     MOV A,#4369
+*** ________________________________^
+*** WARNING #A52 IN 1 (q15.asm, LINE -3): VALUE HAS BEEN TRUNCATED TO 8 BITS
+0002 75F09A            2     MOV B,#154
+0005 A4                3     MUL AB
+0006 F530              4     MOV 30h,A
+                       5     END
+A51 MACRO ASSEMBLER  Q15                                                                  12/14/2022 15:32:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

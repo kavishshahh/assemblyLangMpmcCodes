@@ -1,0 +1,37 @@
+A51 MACRO ASSEMBLER  ADD10NUMSSERIES                                                      12/13/2022 21:41:42 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\add10numsseries.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE add10numsseries.asm SET(SMALL) DEBUG PRINT(.\Listings\add10numsseries.l
+                      st) OBJECT(.\Objects\add10numsseries.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+0000 7820              3     MOV R0,#20H
+0002 7D0A              4     MOV R5,#0AH
+0004 7B00              5     MOV R3,#00H
+0006 E6                6     UP:MOV A,@R0
+0007 2B                7     ADD A,R3
+0008 FB                8     MOV R3,A
+0009 08                9     INC R0
+000A DDFA             10     DJNZ R5,UP
+000C F6               11     MOV @R0,A
+                      12     END
+A51 MACRO ASSEMBLER  ADD10NUMSSERIES                                                      12/13/2022 21:41:42 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+UP . . . . . . . .  C ADDR   0006H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

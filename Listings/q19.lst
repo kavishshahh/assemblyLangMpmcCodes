@@ -1,0 +1,29 @@
+A51 MACRO ASSEMBLER  Q19                                                                  12/14/2022 20:08:05 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\q19.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE q19.asm SET(SMALL) DEBUG PRINT(.\Listings\q19.lst) OBJECT(.\Objects\q19
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7426              1     MOV A,#26H
+0002 7838              2     MOV R0,#38H
+0004 28                3     ADD A,R0
+0005 D4                4     DA A
+                       5     END
+A51 MACRO ASSEMBLER  Q19                                                                  12/14/2022 20:08:05 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

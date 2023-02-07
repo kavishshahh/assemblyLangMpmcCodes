@@ -1,0 +1,30 @@
+A51 MACRO ASSEMBLER  ADDNUMS                                                              12/13/2022 21:46:20 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\addnums.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE addnums.asm SET(SMALL) DEBUG PRINT(.\Listings\addnums.lst) OBJECT(.\Obj
+                      ects\addnums.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 904000            1     MOV DPTR,#4000H          
+0003 7407              2     MOV A,#07H                       
+0005 7B06              3     MOV R3,#06H          
+0007 2B                4     ADD A,R3
+0008 F0                5     MOVX @DPTR,A
+                       6     END
+A51 MACRO ASSEMBLER  ADDNUMS                                                              12/13/2022 21:46:20 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  Q23                                                                  12/14/2022 22:52:55 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\q23.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE q23.asm SET(SMALL) DEBUG PRINT(.\Listings\q23.lst) OBJECT(.\Objects\q23
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 758910            1     MOV TMOD,#10H
+                       2     
+0003                   3     AGAIN:
+0003 758B00            4     MOV TL1,#00
+0006 758DDC            5     MOV TH1,#0DCH
+0009 D28E              6     SETB TR1
+                       7     
+000B                   8     BACK:
+000B 308FFD            9     JNB TF1,BACK
+000E C28E             10     CLR TR1
+0010 B2A3             11     CPL P2.3
+0012 C28F             12     CLR TF1
+0014 80ED             13     SJMP AGAIN
+*** WARNING #A41 IN 13 (q23.asm, LINE 13): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  Q23                                                                  12/14/2022 22:52:55 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0003H   A   
+BACK . . . . . . .  C ADDR   000BH   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

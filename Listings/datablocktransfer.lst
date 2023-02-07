@@ -1,0 +1,48 @@
+A51 MACRO ASSEMBLER  DATABLOCKTRANSFER                                                    12/13/2022 22:09:18 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\datablocktransfer.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE datablocktransfer.asm SET(SMALL) DEBUG PRINT(.\Listings\datablocktransf
+                      er.lst) OBJECT(.\Objects\datablocktransfer.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+                       3     ;MOV R0,#20H
+                       4     ;MOV R1,#30H
+                       5     ;MOV R5,#0AH
+                       6     ;UP:MOV A,@R0
+                       7     ;MOV @R1,A
+                       8     ;INC R0
+                       9     ;INC R1
+                      10     ;DJNZ R5,UP
+                      11     ;END
+                      12     
+                      13     
+                      14     
+0000 7820             15     MOV R0,#20H
+0002 904000           16     MOV DPTR,#4000H
+0005 7D0A             17     MOV R5,#0AH
+0007 E6               18     UP:MOV A,@R0
+0008 F0               19     MOVX @DPTR,A
+0009 08               20     INC R0
+000A A3               21     INC DPTR
+000B DDFA             22     DJNZ R5,UP
+                      23     END
+A51 MACRO ASSEMBLER  DATABLOCKTRANSFER                                                    12/13/2022 22:09:18 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+UP . . . . . . . .  C ADDR   0007H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

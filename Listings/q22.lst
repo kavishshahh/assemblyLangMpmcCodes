@@ -1,0 +1,65 @@
+A51 MACRO ASSEMBLER  Q22                                                                  12/14/2022 15:39:08 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\q22.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE q22.asm SET(SMALL) DEBUG PRINT(.\Listings\q22.lst) OBJECT(.\Objects\q22
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; Define the input packed BCD value
+0000 7823              2     mov r0, #123H
+*** __________________________________^
+*** WARNING #A52 IN 2 (q22.asm, LINE 2): VALUE HAS BEEN TRUNCATED TO 8 BITS
+                       3     
+                       4     ; Convert the packed BCD value to ASCII code
+0002 E8                5     mov a, r0
+0003 54F0              6     anl a, #0F0H
+0005 F9                7     mov r1, a
+0006 E9                8     mov a, r1
+0007 2430              9     add a, #30H
+0009 FA               10     mov r2, a
+000A E8               11     mov a, r0
+000B F9               12     mov r1, a
+000C E9               13     mov a, r1
+000D 540F             14     anl a, #0FH
+000F F9               15     mov r1, a
+0010 E9               16     mov a, r1
+0011 2430             17     add a, #30H
+0013 FB               18     mov r3, a
+                      19     
+                      20     ; Display the ASCII code
+0014 8A82             21     mov dpl, r2
+0016 8B83             22     mov dph, r3
+0018 E582             23     mov a, dpl
+001A 8583F0           24     mov b, dph
+001D FC               25     mov r4, a
+001E ADF0             26     mov r5, b
+                      27     
+0020 740E             28     mov a, #0x0E
+0022 120005           29     lcall 0x0005
+                      30     
+0025 EC               31     mov a, r4
+0026 120005           32     lcall 0x0005
+                      33     
+0029 ED               34     mov a, r5
+002A 120005           35     lcall 0x0005
+*** WARNING #A41 IN 35 (q22.asm, LINE 35): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  Q22                                                                  12/14/2022 15:39:08 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  2 WARNING(S), 0 ERROR(S)

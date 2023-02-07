@@ -1,0 +1,33 @@
+A51 MACRO ASSEMBLER  DIVISIONNUM                                                          12/13/2022 21:59:21 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\divisionNum.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE divisionNum.asm SET(SMALL) DEBUG PRINT(.\Listings\divisionNum.lst) OBJE
+                      CT(.\Objects\divisionNum.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+0000 904000            3     MOV DPTR,#4000H
+0003 740A              4     MOV A,#0AH
+0005 75F005            5     MOV B,#05H
+0008 84                6     DIV AB
+0009 F0                7     MOVX @DPTR,A
+                       8     END
+A51 MACRO ASSEMBLER  DIVISIONNUM                                                          12/13/2022 21:59:21 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

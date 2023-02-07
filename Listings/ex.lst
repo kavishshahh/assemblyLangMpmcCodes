@@ -1,0 +1,38 @@
+A51 MACRO ASSEMBLER  EX                                                                   01/04/2023 18:45:24 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ex.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ex.asm SET(SMALL) DEBUG PRINT(.\Listings\ex.lst) OBJECT(.\Objects\ex.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 758083            1     MOV P0,#83H  
+0003 E580              2     READSW: MOV A,P0  
+0005 13                3     RRC A  
+0006 4004              4     JC NXT  
+0008 C287              5     CLR P0.7  
+000A 80F7              6     SJMP READSW  
+000C 13                7     NXT: RRC A  
+000D 40F4              8     JC READSW  
+000F D287              9     SETB P0.7  
+0011 80F0             10     SJMP READSW  
+                      11     END
+A51 MACRO ASSEMBLER  EX                                                                   01/04/2023 18:45:24 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+NXT. . . . . . . .  C ADDR   000CH   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+READSW . . . . . .  C ADDR   0003H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

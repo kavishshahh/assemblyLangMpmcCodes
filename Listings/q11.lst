@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  Q11                                                                  12/14/2022 14:49:08 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\q11.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE q11.asm SET(SMALL) DEBUG PRINT(.\Listings\q11.lst) OBJECT(.\Objects\q11
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7820              1     MOV R0, #20H
+0002 7930              2     MOV R1, #30H
+0004 7A05              3     MOV R2, #5
+                       4     
+0006                   5     UP: 
+0006 E6                6     MOV A, @R0
+0007 87F0              7     MOV B, @R1
+0009 F7                8     MOV @R1, A
+000A A6F0              9     MOV @R0, B
+                      10     
+000C 08               11     INC R0
+000D 09               12     INC R1
+000E DAF6             13     DJNZ R2, UP
+                      14     
+                      15     END
+A51 MACRO ASSEMBLER  Q11                                                                  12/14/2022 14:49:08 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+UP . . . . . . . .  C ADDR   0006H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

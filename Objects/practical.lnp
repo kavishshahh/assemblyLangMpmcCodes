@@ -1,0 +1,3 @@
+".\Objects\ex.obj" 
+TO ".\Objects\practical" 
+PRINT(".\Listings\practical.m51")

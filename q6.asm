@@ -1,0 +1,15 @@
+// WAP to count number of 1’s in a given byte.
+
+MOV A,#35H 		//00110101
+MOV R7,#08H 	//COUNTER
+MOV R5,#00H		//RESULT
+
+UP:
+RRC A  			//ROTATE WITH CARRY
+JNC L1			//IF CARRY IS NOT THERE JUMP TO L1
+INC R5
+
+L1:
+DJNZ R7,UP
+
+END

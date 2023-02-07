@@ -1,0 +1,15 @@
+MOV R0, #20H
+MOV R1, #30H
+MOV R2, #5
+
+UP: 
+MOV A, @R0
+MOV B, @R1
+MOV @R1, A
+MOV @R0, B
+
+INC R0
+INC R1
+DJNZ R2, UP
+
+END
